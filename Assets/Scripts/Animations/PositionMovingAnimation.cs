@@ -9,6 +9,7 @@ public class PositionMovingAnimation : MonoBehaviour
     [SerializeField] private Transform targetPoint;
 
     [SerializeField] private float speed;
+    [SerializeField] private float time;
     [SerializeField] private bool resetOnStart = true;
 
     public event Action AnimationFinished;
@@ -32,8 +33,9 @@ public class PositionMovingAnimation : MonoBehaviour
     public void InitializeAndPlay()
     {
         _cachedTweener = objectToMove
-            .DOMove(targetPoint.position, speed)
-            .SetSpeedBased(true)
+            .DOMove(targetPoint.position, time)
+            //.DOMove(targetPoint.position, speed)
+            //.SetSpeedBased(true)
             .OnComplete(() =>
             {
                 AnimationFinished?.Invoke();

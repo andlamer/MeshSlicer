@@ -1402,6 +1402,7 @@ MonoBehaviour:
   startingPoint: {fileID: 53325223}
   targetPoint: {fileID: 1790895602}
   speed: 0.2
+  time: 15
   resetOnStart: 1
 --- !u!1 &1461570882
 GameObject:
